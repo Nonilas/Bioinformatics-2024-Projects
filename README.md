@@ -1,82 +1,139 @@
-# Bioinformatics 2024 Projects
+# Bioinformatics Portfolio with MATLAB
 
-Welcome to my collection of **Bioinformatics MATLAB** assignments for the 2024 course: **DACS Introduction to Bioinformatics**. This repository showcases various **sequence analysis**, **gene expression**, **metabolomics**, and **phylogenetic** studies I performed to demonstrate proficiency in **MATLAB** and the **Bioinformatics Toolbox**.
+This repository contains a collection of bioinformatics projects completed as part of the DACS Introduction to Bioinformatics course. The projects demonstrate various computational approaches to analyzing biological data using MATLAB.
 
-## Table of Contents
-1. [Overview](#overview)
-2. [Technologies & Toolboxes](#technologies--toolboxes)
-3. [Project Folders](#project-folders)
-4. [Data Sources](#data-sources)
-5. [Usage](#usage)
-6. [License](#license)
+## 🧬 Skills Showcased
 
----
+- **Sequence Analysis**: Pairwise alignment, dot plots, significance testing
+- **Phylogenetic Analysis**: Multiple sequence alignment, tree construction, evolutionary distance calculation
+- **Gene Expression Analysis**: Microarray data processing, differential expression, statistical significance testing
+- **Metabolomics**: Principal Component Analysis, data normalization, biomarker identification
+- **Data Visualization**: Heatmaps, phylogenetic trees, PCA plots, box plots
+- **Statistical Analysis**: T-tests, multiple testing correction, permutation tests
 
-## Overview
+## 🔧 Technologies & Tools
 
-These projects span multiple areas of bioinformatics:
+- **MATLAB**: Primary analysis platform
+- **Bioinformatics Toolbox**: Key functions including `seqdotplot`, `swalign`, `nwalign`, `getgenpept`
+- **Statistics & Machine Learning Toolbox**: PCA analysis, normalization techniques
+- **Data Import/Export Tools**: Processing of CSV, Excel, and text files
+- **Visualization Packages**: Custom plotting and visualization
 
-- **Sequence Alignment**: Using *local* (Smith-Waterman) vs. *global* (Needleman-Wunsch) alignments to compare protein sequences, assess significance via random permutations, and interpret alignment scoring matrices.
-- **Phylogenetics**: Retrieving orthologous sequences (e.g., FOXP2), constructing distance matrices, and building phylogenetic trees (Neighbor-Joining, Hierarchical Clustering).
-- **Differential Gene Expression**: Analyzing microarray data (CHTP vs. cigarette exposure), normalizing gene expression, performing statistical tests, and correcting for multiple hypotheses.
-- **Metabolomics & PCA**: Comparing healthy vs. sporadic Parkinson’s Disease metabolite profiles. Demonstrating data preprocessing, normalization, PCA loadings, and group separations.
-- **Practical Assignments**: Smaller tasks highlighting fundamental MATLAB operations, additional analytics, or course-specific exercises.
+## 📂 Project Structure
 
----
+The repository is organized into the following main directories:
 
-## Technologies & Toolboxes
+1. **Sequence Alignment Analysis**: Comparative analysis of RING1 protein sequences
+2. **Phylogenetic Analysis**: FOXP2 gene evolution across species 
+3. **Gene Expression Analysis**: Effect of cigarette and tobacco aerosol exposure on gene expression
+4. **Metabolomics**: PCA analysis of metabolites in Parkinson's disease
 
-- **MATLAB** (R2021a or later recommended)
-  - *Bioinformatics Toolbox*: For sequence retrieval (`getgenpept`), alignment (`swalign`, `nwalign`), dot plots (`seqdotplot`), phylogenetic trees (`seqpdist`, `seqlinkage`, `seqneighjoin`), etc.
-  - *Statistics and Machine Learning Toolbox*: For PCA, box plots, t-tests, etc.
-- **Data Visualization**: Standard MATLAB plotting functions, `gscatter`, `bar`, `heatmap`, `boxplot`.
-- **Excel/Spreadsheet I/O**: For reading `Cigarette_exposure.xlsx` or other tabular data (`readtable`).
+## 📊 Projects Overview
 
----
+### 1. Sequence Alignment Analysis
 
-## Project Folders
+Comparative analysis of RING1 protein sequences between humans, groundhogs, and birds using:
 
-1. **[1_SequenceAlignment](1_SequenceAlignment)**
-   - **SequenceAlignment.m**: Demonstrates `getgenpept`, `seqdotplot`, local (`swalign`) and global (`nwalign`) alignments.
-   - **SignificanceTesting.m**: Uses permutation tests (`randperm`) and random sequence generation (`randseq`) to assess alignment score significance.
+- Dot matrix visualization
+- Local and global alignment algorithms
+- Statistical significance testing via permutation
+- Scoring matrix optimization
 
-2. **[2_FOXP2_Phylogenetics](2_FOXP2_Phylogenetics)**
-   - **FOXP2_Phylogenetics_Analysis.m**: Retrieves FOXP2 sequences, computes distance matrices (`seqpdist`), builds phylogenetic trees (`seqlinkage`, `seqneighjoin`), and visualizes them.
+**Key Findings**: Discovered significant sequence conservation between mammals, with local alignments revealing functionally important domains.
 
-3. **[3_CigaretteExposure_Expression](3_CigaretteExposure_Expression)**
-   - **CigaretteExposure_Analysis.m**: Reads gene expression data from `Cigarette_exposure.xlsx`.
-   - **DifferentialExpression.m**: Performs normalization (quantile, median fold-change, Z-score), t-tests, BH FDR correction, and histogram visualizations.
+### 2. Phylogenetic Analysis of FOXP2
 
-4. **[4_Parkinsons_Metabolomics_PCA](4_Parkinsons_Metabolomics_PCA)**
-   - **Parkinsons_PCA_Analysis.m**: Analyzes metabolomics data from healthy vs. sporadic PD groups. Includes missing data imputation, PCA, loadings extraction, and box plots.
-   - **Normalization_Comparison.m**: Compares mean-centering vs. Z-score scaling and demonstrates the effect on PCA results.
+Analysis of the FOXP2 gene (associated with language development) across multiple species:
 
-5. **[5_MCF_Hypoxia_Expression](5_MCF_Hypoxia_Expression)**
-   - **MCF_Hypoxia_RawExpression_Analysis.m**: Processes raw microarray/RNA-seq data under hypoxia, performs normalization, and identifies differentially expressed genes.
+- Multiple sequence alignment of orthologs
+- Distance matrix calculation
+- Tree construction using various linkage methods
+- Evolutionary relationship visualization
 
-6. **[6_PCA_Final_Assignment](6_PCA_Final_Assignment)**
-   - **PCA_Assignment.m**: Final consolidated PCA project, exploring advanced PCA features, scree plots, and loadings with multiple datasets.
+**Key Findings**: Demonstrated clear separation between mammalian and non-mammalian lineages, with primates showing closest evolutionary relationships.
 
-7. **[Additional_Practicals](Additional_Practicals)**
-   - Contains smaller scripts like `practical3_2023.m`, `practical5_2023.m`, `practical6_2024.m`, demonstrating fundamental MATLAB/bioinformatics tasks.
+### 3. Gene Expression Analysis of Cigarette Exposure
 
-8. **[Utilities](Utilities)**
-   - **HelperFunctions.m**: Shared functions for plotting, statistics, or repeated tasks.
+Analysis of differential gene expression in cells exposed to conventional cigarettes vs. carbon heated tobacco products (CHTP):
 
----
+- Microarray data normalization
+- Statistical testing for differential expression
+- Multiple testing correction
+- Identification of significantly altered genes
 
-## Data Sources
+**Key Findings**: Identified genes consistently expressed in product-specific patterns and quantified differences between exposure types.
 
-- **NCBI GenBank** for protein sequences (e.g., RING1, FOXP2).
-- **EBI ArrayExpress / Local Excel Files** for microarray gene expression data (`Cigarette_exposure.xlsx`).
-- **Local Metabolomics Data** (`parkinsons_metabolites.txt`).
+### 4. Metabolomic Analysis of Parkinson's Disease
 
-> **Note**: Some data files (Excel, text) may not be included in this repo for size or licensing reasons. Adjust file paths as needed if you place them in the same folder.
+PCA-based analysis of metabolites in stem cells differentiated into midbrain neuronal precursor cells:
 
----
+- Data preprocessing and normalization
+- Principal Component Analysis
+- Identification of key metabolites
+- Visualization and interpretation of metabolic differences
 
-## Usage
+**Key Findings**: Identified metabolites that effectively separate Parkinson's disease samples from controls, highlighting potential biomarkers.
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/YourUsername/Bioinformatics_2024_Projects.git
+## 🚀 Getting Started
+
+### Prerequisites
+
+- MATLAB (R2021a or newer recommended)
+- Bioinformatics Toolbox
+- Statistics and Machine Learning Toolbox
+
+### Running the Code
+
+1. Clone this repository
+2. Open MATLAB and navigate to the repository directory
+3. Add all folders to path: `addpath(genpath('.'))`
+4. Navigate to a specific project folder
+5. Open the corresponding MATLAB Live Script (.mlx) file to see the analysis with explanations
+6. Alternatively, run individual .m script files
+
+## 📖 Documentation
+
+Each project directory contains its own README with detailed documentation including:
+
+- Project objectives
+- Methodological approaches
+- Data processing workflows
+- Key findings and biological interpretations
+- Technical challenges and solutions
+
+## 🔍 Notable Techniques
+
+- **Sequence Analysis**: 
+  - Smith-Waterman local alignment
+  - Needleman-Wunsch global alignment
+  - BLOSUM scoring matrices
+  - Permutation-based significance testing
+
+- **Phylogenetic Analysis**:
+  - Distance-based tree construction
+  - Multiple linkage methods (single, complete, average)
+  - Neighbor-joining algorithm
+
+- **Gene Expression Analysis**:
+  - Quantile normalization
+  - T-test with multiple testing correction (Benjamini-Hochberg)
+  - Volcano plots and heatmaps
+
+- **Metabolomics**:
+  - Data imputation for missing values
+  - Z-score and mean-centering normalization
+  - Principal Component Analysis
+  - Feature importance determination
+
+## 👨‍💻 Author
+
+Created by [Your Name]
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🙏 Acknowledgments
+
+- DACS Introduction to Bioinformatics course
+- Original data sources and research studies that provided the datasets
