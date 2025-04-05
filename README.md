@@ -13,7 +13,7 @@ This repository contains a collection of bioinformatics projects completed as pa
 
 ## 🔧 Technologies & Tools
 
-- **MATLAB**: Primary analysis platform
+- **MATLAB**: Primary analysis platform - editor
 - **Bioinformatics Toolbox**: Key functions including `seqdotplot`, `swalign`, `nwalign`, `getgenpept`
 - **Statistics & Machine Learning Toolbox**: PCA analysis, normalization techniques
 - **Data Import/Export Tools**: Processing of CSV, Excel, and text files
