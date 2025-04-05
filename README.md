@@ -127,11 +127,7 @@ Each project directory contains its own README with detailed documentation inclu
 
 ## 👨‍💻 Author
 
-Created by [Your Name]
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
+Created by Achilleas Leivadiotis
 
 ## 🙏 Acknowledgments
 
